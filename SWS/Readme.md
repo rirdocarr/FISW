@@ -1,5 +1,10 @@
 #SIPAE's Web Service folder
 
+Consideration
+-------------
+Take a look into logs.me
+
+
 
 Before start
 ------------
