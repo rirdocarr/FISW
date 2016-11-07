@@ -1,8 +1,8 @@
 #LOGS 
 
-----------
+
 ##beta 1.0.2
-----------
+
 ###New folders
 - public
 - views
@@ -15,14 +15,12 @@
 - registro.html
 - menucursos.html
 - curso.html
-----------
+
 ##beta 1.0.1
-----------
-  - server.js config
-----------
+- server.js config
+
 ##beta 1.0.0
-----------
-  - app.js config
+- app.js config
 
 
 
