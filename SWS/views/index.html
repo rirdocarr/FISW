@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SIPAE Web Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-controller="index.js">
+<header class="main__header">
+  <div class="container">
+    <nav class="navbar navbar-default" role="navigation"> 
+      <!-- Brand and toggle get grouped for better mobile display --> 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="navbar-header">
+        <h1 class="navbar-brand"><a href="/index">SIPAE</a></h1>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+      <div class="navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/index">Home</a></li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+            <ul class="dropdown-menu">
+              <li><a href="/index"> THIS DOESNT WORK </a></li>
+              <li><a href="index_fixed.html">Home</a></li>
+              <li><a href="service.html">Web Store</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="/login">Login</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </nav>
+  </div>
+</header>
+<section class="slider">
+  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item"> <img data-src="public/images/slider/image_1920x580.jpg" alt="First slide" src="images/slider/image_1920x580.jpg">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>LOREM LIPSUM LOGIN</h1>
+            <p>BLABLA KAWAI </p>
+            <p><a class="btn btn-default btn-lg" href="#" role="button">Iniciar Sesion</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="item active"> <img data-src="images/slider/image_1920x580.jpg" alt="Second slide" src="images/slider/image_1920x580.jpg">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>LOREM LIPSUM REGISTER</h1>
+            <p>BLABLA KAWAI 2</p>
+            <p><a class="btn btn-default btn-lg" href="#" role="button">REGISTRATE</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon carousel-control-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon carousel-control-right"></span></a> </div>
+</section>
+<!--end of slider section-->
+<section class="main__middle__container">
+  <div class="container">
+    <div class="row text-center">
+      <h2 class=""><span class="blue">Sistema de Integrado Para el Apredizaje Especializado</span></h2>
+      <p class="big-paragraph">Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+    </div>
+  </div>
+  <div class="row no_padding icons__blocks text-center">
+    <div class="container">
+      <h2 class="page_title"><span>Our Services</span><br />
+        <span class="sep"></span><br />
+        <small>Cras ornare tristique elit</small></h2>
+      <div class="col-md-4"> <img src="images/content__images/image_300x190.jpg" alt="image" class="img-responsive img-rounded">
+        <h3><a href="#">Gestion de Asignaturas</a></h3>
+        <p class="small-paragraph">Vestibulum auctor dapibus neque.</p>
+        <p>Quisque et aliquam mauris. Nunc id cursus quam. Curabitur aliquam ornare ante et commodo. Nulla eu erat id massa egestas eleifend. Sed id venenatis.</p>
+        <p><a href="#" class="btn btn-info">Learn more</a></p>
+      </div>
+      <div class="col-md-4"> <img src="images/content__images/image_300x190.jpg" alt="image" class="img-responsive img-rounded">
+        <h3><a href="#">Gestion de Materiales</a></h3>
+        <p class="small-paragraph">Vestibulum auctor dapibus neque.</p>
+        <p>Quisque et aliquam mauris. Nunc id cursus quam. Curabitur aliquam ornare ante et commodo. Nulla eu erat id massa egestas eleifend. Sed id venenatis.</p>
+        <p><a href="#" class="btn btn-info">Learn more</a></p>
+      </div>
+      <div class="col-md-4"> <img src="images/content__images/image_300x190.jpg" alt="image" class="img-responsive img-rounded">
+        <h3><a href="#">Cursos dinamicos según categorias</a></h3>
+        <p class="small-paragraph">Vestibulum auctor dapibus neque.</p>
+        <p>Quisque et aliquam mauris. Nunc id cursus quam. Curabitur aliquam ornare ante et commodo. Nulla eu erat id massa egestas eleifend. Sed id venenatis.</p>
+        <p><a href="#" class="btn btn-info">Learn more</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="row grey-info-block text-center">
+    <div class="container">
+      <h2 class="page_title"><span>About Us</span><br />
+        <span class="sep"></span><br />
+        <small>Cras ornare tristique elit</small></h2>
+      <div class="col-md-4"> <img src="images/content__images/image_300x190.jpg" alt="image" class="img-rounded img-responsive">
+        <h3>Ricardo Carrasco</h3>
+        <p class="small-paragraph">Phasellus ultrices nulla quis nibh. Quisque a lectus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+        <p><a href="http://www.facebook.com/ricardo.carrasco.a" class="btn btn-info" target="_blanck">Facebook</a></p>
+      </div>
+      <div class="col-md-4"> <img src="images/content__images/image_300x190.jpg" alt="image" class="img-rounded img-responsive">
+        <h3>Juan Bustamante</h3>
+        <p class="small-paragraph">Phasellus ultrices nulla quis nibh. Quisque a lectus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+        <p><a href="http://www.facebook.com/jotaaaace" class="btn btn-info" target="_blanck">Facebook</a></p>
+      </div>
+      <div class="col-md-4"> <img src="images/content__images/image_300x190.jpg" alt="image" class="img-rounded img-responsive">
+        <h3>Rolando Casanueva</h3>
+        <p class="small-paragraph">Phasellus ultrices nulla quis nibh. Quisque a lectus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+        <p><a href="http://www.facebook.com/rola.casanueva" class="btn btn-info" target="_blanck">Facebook</a></p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</section>
+</section>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h3>About</h3>
+        <p>SIPAE Lorem Lipsum blabla Super Kawai</p>
+      </div>
+      <div class="col-md-3">
+        
+      </div>
+      <div class="col-md-3">
+      
+      </div>
+      <div class="col-md-3">
+        <h3>Social</h3>
+        <div class="social__icons"> <a href="#" class="socialicon socialicon-twitter"></a> <a href="#" class="socialicon socialicon-facebook"></a> <a href="#" class="socialicon socialicon-google"></a> <a href="#" class="socialicon socialicon-mail"></a> </div>
+      </div>
+    </div>
+    <hr>
+    <p class="text-center">&copy; Copyright rCasanueva Company. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript">
+
+$('.carousel').carousel({
+  interval: 3500, // in milliseconds
+  pause: 'none' // set to 'true' to pause slider on mouse hover
+})
+
+</script>
+</body>
+</html>
