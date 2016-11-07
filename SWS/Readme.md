@@ -1,5 +1,11 @@
 #SIPAE's Web Service folder
 
+- [x] Template Integration
+- [x] DataBase Support
+- [] DataBase Connection
+- [] Models Integration
+- [] Controllers Integration
+
 Consideration
 -------------
 Take a look into 
