@@ -2,9 +2,9 @@
 
 - [x] Template Integration
 - [x] DataBase Support
-- [] DataBase Connection
-- [] Models Integration
-- [] Controllers Integration
+- [ ] DataBase Connection
+- [ ] Models Integration
+- [ ] Controllers Integration
 
 Consideration
 -------------
