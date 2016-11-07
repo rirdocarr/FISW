@@ -4,7 +4,7 @@ Consideration
 -------------
 Take a look into 
 ```
-logs.me
+>>> logs.me
 ```
 
 Before start
