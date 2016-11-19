@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SIPAE Web Services</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet">
+  <title>SIPAE Web Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+  $(".oculto").hide();              
+    $(".inf").click(function(){
+          var nodo = $(this).attr("href");  
+ 
+          if ($(nodo).is(":visible")){
+               $(nodo).hide();
+               return false;
+          }else{
+        $(".oculto").hide("slow");                             
+        $(nodo).fadeToggle("fast");
+        return false;
+          }
+    });
+}); 
+</script>
 
 </head>
 <body>
@@ -43,6 +62,7 @@
     </nav>
   </div>
 </header>
+
 <div class="container">
 <form class="form-horizontal">
 <fieldset>
@@ -123,515 +143,524 @@
   </div>
 </div>
 
-<!-- Form Name -->
-<legend><h3>Encuesta</h3></legend>
+<!-- Encuesta -->
+<legend>
+  <div class="row">
+    <div class="col-sm-4 col-xs well">
+      <a href="#encuesta-total" class="inf">Encuesta</a>
+    </div>
+  </div>
 
-<!-- Q1 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q1">Cuando aprendo:</label>
-  <label class="col-md-1 control-label" for="Q1-1">Me gusta vivir sensaciones</label>
-  <div class="col-md-1">
-    <select id="Q1-1" name="Q1-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-2">Me gusta pensar sobre ideas</label>
-  <div class="col-md-1">
-    <select id="Q1-2" name="Q1-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-3">Me gusta estar haciendo cosas</label>
-  <div class="col-md-1">
-    <select id="Q1-3" name="Q1-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-4">Me gusta observar y escuchar</label>
-  <div class="col-md-1">
-    <select id="Q1-4" name="Q1-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/>
-<legend></legend>
+</legend>
 
-<!-- Q2 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q2">Aprendo mejor cuando:</label>
-  <label class="col-md-1 control-label" for="Q2-1">Escucho y observo cuidadosamente</label>
-  <div class="col-md-1">
-    <select id="Q2-1" name="Q1-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+<div id="encuesta-total" class="oculto">
+  <!-- Q1 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q1">Cuando aprendo:</label>
+    <label class="col-md-1 control-label" for="Q1-1">Me gusta vivir sensaciones</label>
+    <div class="col-md-1">
+      <select id="Q1-1" name="Q1-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-2">Me gusta pensar sobre ideas</label>
+    <div class="col-md-1">
+      <select id="Q1-2" name="Q1-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-3">Me gusta estar haciendo cosas</label>
+    <div class="col-md-1">
+      <select id="Q1-3" name="Q1-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-4">Me gusta observar y escuchar</label>
+    <div class="col-md-1">
+      <select id="Q1-4" name="Q1-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q2-2">Confío en el pensamiento lógico</label>
-  <div class="col-md-1">
-    <select id="Q2-2" name="Q2-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q2-3">Confío en mi intuición y sentimientos</label>
-  <div class="col-md-1">
-    <select id="Q2-3" name="Q2-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q2-4">Trabajo duro para lograr hacer las cosas</label>
-  <div class="col-md-1">
-    <select id="Q2-4" name="Q2-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/>
-<legend></legend>
+  <br/>
+  <legend></legend>
 
-<!-- Q3 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q3">Cuando estoy aprendiendo:</label>
-  <label class="col-md-1 control-label" for="Q3-1">Tiendo a usar el razonamiento</label>
-  <div class="col-md-1">
-    <select id="Q3-1" name="Q3-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q2 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q2">Aprendo mejor cuando:</label>
+    <label class="col-md-1 control-label" for="Q2-1">Escucho y observo cuidadosamente</label>
+    <div class="col-md-1">
+      <select id="Q2-1" name="Q1-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q2-2">Confío en el pensamiento lógico</label>
+    <div class="col-md-1">
+      <select id="Q2-2" name="Q2-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q2-3">Confío en mi intuición y sentimientos</label>
+    <div class="col-md-1">
+      <select id="Q2-3" name="Q2-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q2-4">Trabajo duro para lograr hacer las cosas</label>
+    <div class="col-md-1">
+      <select id="Q2-4" name="Q2-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q3-2">Soy responsable con lo que hago</label>
-  <div class="col-md-1">
-    <select id="Q3-2" name="Q3-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q3-3">Soy callado y reservado</label>
-  <div class="col-md-1">
-    <select id="Q3-3" name="Q3-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q3-4">Tengo fuertes sensacinoes y reacciones</label>
-  <div class="col-md-1">
-    <select id="Q3-4" name="Q3-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/>
-<legend></legend>
+  <br/>
+  <legend></legend>
 
-<!-- Q4 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q4">Yo aprendo:</label>
-  <label class="col-md-1 control-label" for="Q4-1">Sintiendo</label>
-  <div class="col-md-1">
-    <select id="Q4-1" name="Q4-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q3 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q3">Cuando estoy aprendiendo:</label>
+    <label class="col-md-1 control-label" for="Q3-1">Tiendo a usar el razonamiento</label>
+    <div class="col-md-1">
+      <select id="Q3-1" name="Q3-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q3-2">Soy responsable con lo que hago</label>
+    <div class="col-md-1">
+      <select id="Q3-2" name="Q3-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q3-3">Soy callado y reservado</label>
+    <div class="col-md-1">
+      <select id="Q3-3" name="Q3-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q3-4">Tengo fuertes sensacinoes y reacciones</label>
+    <div class="col-md-1">
+      <select id="Q3-4" name="Q3-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q4-2">Haciendo</label>
-  <div class="col-md-1">
-    <select id="Q4-2" name="Q4-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q4-3">Observando</label>
-  <div class="col-md-1">
-    <select id="Q4-3" name="Q4-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q4-4">Pensando</label>
-  <div class="col-md-1">
-    <select id="Q4-4" name="Q4-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/><legend></legend>
+  <br/>
+  <legend></legend>
 
-<!-- Q5 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q5">Cuando aprendo...</label>
-  <label class="col-md-1 control-label" for="Q5-1">Estoy abierto a nuevas experiencias</label>
-  <div class="col-md-1">
-    <select id="Q5-1" name="Q5-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q4 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q4">Yo aprendo:</label>
+    <label class="col-md-1 control-label" for="Q4-1">Sintiendo</label>
+    <div class="col-md-1">
+      <select id="Q4-1" name="Q4-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q4-2">Haciendo</label>
+    <div class="col-md-1">
+      <select id="Q4-2" name="Q4-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q4-3">Observando</label>
+    <div class="col-md-1">
+      <select id="Q4-3" name="Q4-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q4-4">Pensando</label>
+    <div class="col-md-1">
+      <select id="Q4-4" name="Q4-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q5-2">Observo todos los aspectos del asunto</label>
-  <div class="col-md-1">
-    <select id="Q5-2" name="Q5-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q5-3">Me gusta analizar las cosas y descomponerlas en sus partes</label>
-  <div class="col-md-1">
-    <select id="Q5-3" name="Q5-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q5-4">Me gusta probar e intentar hacer las cosas</label>
-  <div class="col-md-1">
-    <select id="Q5-4" name="Q5-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/><legend></legend>
+  <br/><legend></legend>
 
-<!-- Q6 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q6">Cuando estoy aprendiendo</label>
-  <label class="col-md-1 control-label" for="Q6-1">Soy una persona observadora</label>
-  <div class="col-md-1">
-    <select id="Q6-1" name="Q6-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q5 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q5">Cuando aprendo...</label>
+    <label class="col-md-1 control-label" for="Q5-1">Estoy abierto a nuevas experiencias</label>
+    <div class="col-md-1">
+      <select id="Q5-1" name="Q5-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q5-2">Observo todos los aspectos del asunto</label>
+    <div class="col-md-1">
+      <select id="Q5-2" name="Q5-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q5-3">Me gusta analizar las cosas y descomponerlas en sus partes</label>
+    <div class="col-md-1">
+      <select id="Q5-3" name="Q5-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q5-4">Me gusta probar e intentar hacer las cosas</label>
+    <div class="col-md-1">
+      <select id="Q5-4" name="Q5-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q6-2">Soy una persona activa</label>
-  <div class="col-md-1">
-    <select id="Q6-2" name="Q6-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q6-3">Soy una persona intuitiva</label>
-  <div class="col-md-1">
-    <select id="Q6-3" name="Q6-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q6-4">Soy una persona lógica</label>
-  <div class="col-md-1">
-    <select id="Q6-4" name="Q6-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/><legend></legend>
+  <br/><legend></legend>
 
-<!-- Q7 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q7">Yo aprendo mejor de:</label>
-  <label class="col-md-1 control-label" for="Q7-1">La observación</label>
-  <div class="col-md-1">
-    <select id="Q7-1" name="Q7-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q6 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q6">Cuando estoy aprendiendo</label>
+    <label class="col-md-1 control-label" for="Q6-1">Soy una persona observadora</label>
+    <div class="col-md-1">
+      <select id="Q6-1" name="Q6-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q6-2">Soy una persona activa</label>
+    <div class="col-md-1">
+      <select id="Q6-2" name="Q6-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q6-3">Soy una persona intuitiva</label>
+    <div class="col-md-1">
+      <select id="Q6-3" name="Q6-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q6-4">Soy una persona lógica</label>
+    <div class="col-md-1">
+      <select id="Q6-4" name="Q6-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q7-2">La relación con otras personas</label>
-  <div class="col-md-1">
-    <select id="Q7-2" name="Q7-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q7-3">Las teorías relacionales</label>
-  <div class="col-md-1">
-    <select id="Q7-3" name="Q7-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q7-4">La oportunidad de probar y practicar</label>
-  <div class="col-md-1">
-    <select id="Q7-4" name="Q7-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/><legend></legend>
+  <br/><legend></legend>
 
-<!-- Q8 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q1">Cuando aprendo...</label>
-  <label class="col-md-1 control-label" for="Q1-1">Me gusta ver los resultados de mi trabajo</label>
-  <div class="col-md-1">
-    <select id="Q1-1" name="Q1-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q7 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q7">Yo aprendo mejor de:</label>
+    <label class="col-md-1 control-label" for="Q7-1">La observación</label>
+    <div class="col-md-1">
+      <select id="Q7-1" name="Q7-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q7-2">La relación con otras personas</label>
+    <div class="col-md-1">
+      <select id="Q7-2" name="Q7-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q7-3">Las teorías relacionales</label>
+    <div class="col-md-1">
+      <select id="Q7-3" name="Q7-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q7-4">La oportunidad de probar y practicar</label>
+    <div class="col-md-1">
+      <select id="Q7-4" name="Q7-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q1-2">Me gustan las ideas y las teorías</label>
-  <div class="col-md-1">
-    <select id="Q1-2" name="Q1-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-3">Me tomo mi tiempo antes de actuar</label>
-  <div class="col-md-1">
-    <select id="Q1-3" name="Q1-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-4">Me siento personalmente involucrado en las cosas</label>
-  <div class="col-md-1">
-    <select id="Q1-4" name="Q1-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/><legend></legend>
+  <br/><legend></legend>
 
-<!-- Q9 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q1">Aprendo mejor cuándo:</label>
-  <label class="col-md-1 control-label" for="Q1-1">Confío en mis observaciones</label>
-  <div class="col-md-1">
-    <select id="Q1-1" name="Q1-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q8 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q1">Cuando aprendo...</label>
+    <label class="col-md-1 control-label" for="Q1-1">Me gusta ver los resultados de mi trabajo</label>
+    <div class="col-md-1">
+      <select id="Q1-1" name="Q1-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-2">Me gustan las ideas y las teorías</label>
+    <div class="col-md-1">
+      <select id="Q1-2" name="Q1-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-3">Me tomo mi tiempo antes de actuar</label>
+    <div class="col-md-1">
+      <select id="Q1-3" name="Q1-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-4">Me siento personalmente involucrado en las cosas</label>
+    <div class="col-md-1">
+      <select id="Q1-4" name="Q1-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q1-2">Confío en mis sentimientos</label>
-  <div class="col-md-1">
-    <select id="Q1-2" name="Q1-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-3">Puedo probar por mi cuenta</label>
-  <div class="col-md-1">
-    <select id="Q1-3" name="Q1-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-4">Confío en mis ideas</label>
-  <div class="col-md-1">
-    <select id="Q1-4" name="Q1-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/><legend></legend>
+  <br/><legend></legend>
 
-<!-- Q10 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q1">Cuando estoy aprendiendo:</label>
-  <label class="col-md-1 control-label" for="Q1-1">Soy una persona reservada</label>
-  <div class="col-md-1">
-    <select id="Q1-1" name="Q1-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q9 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q1">Aprendo mejor cuándo:</label>
+    <label class="col-md-1 control-label" for="Q1-1">Confío en mis observaciones</label>
+    <div class="col-md-1">
+      <select id="Q1-1" name="Q1-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-2">Confío en mis sentimientos</label>
+    <div class="col-md-1">
+      <select id="Q1-2" name="Q1-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-3">Puedo probar por mi cuenta</label>
+    <div class="col-md-1">
+      <select id="Q1-3" name="Q1-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-4">Confío en mis ideas</label>
+    <div class="col-md-1">
+      <select id="Q1-4" name="Q1-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q1-2">Soy una persona receptiva</label>
-  <div class="col-md-1">
-    <select id="Q1-2" name="Q1-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-3">Soy una persona responsable</label>
-  <div class="col-md-1">
-    <select id="Q1-3" name="Q1-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-4">Soy una persona racional</label>
-  <div class="col-md-1">
-    <select id="Q1-4" name="Q1-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/><legend></legend>
+  <br/><legend></legend>
 
-<!-- Q11 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q1">Cuando aprendo...</label>
-  <label class="col-md-1 control-label" for="Q1-1">Me involucro</label>
-  <div class="col-md-1">
-    <select id="Q1-1" name="Q1-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q10 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q1">Cuando estoy aprendiendo:</label>
+    <label class="col-md-1 control-label" for="Q1-1">Soy una persona reservada</label>
+    <div class="col-md-1">
+      <select id="Q1-1" name="Q1-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-2">Soy una persona receptiva</label>
+    <div class="col-md-1">
+      <select id="Q1-2" name="Q1-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-3">Soy una persona responsable</label>
+    <div class="col-md-1">
+      <select id="Q1-3" name="Q1-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-4">Soy una persona racional</label>
+    <div class="col-md-1">
+      <select id="Q1-4" name="Q1-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q1-2">Me gusta observar</label>
-  <div class="col-md-1">
-    <select id="Q1-2" name="Q1-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-3">Evalúo las cosas</label>
-  <div class="col-md-1">
-    <select id="Q1-3" name="Q1-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-4">Me gusta ser activo</label>
-  <div class="col-md-1">
-    <select id="Q1-4" name="Q1-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-</div>
-<br/><legend></legend>
+  <br/><legend></legend>
 
-<!-- Q12 -->
-<div class="form-group">
-  <label class="col-md-3 control-label" for="Q1">Aprendo mejor cuándo:</label>
-  <label class="col-md-1 control-label" for="Q1-1">Analizo ideas</label>
-  <div class="col-md-1">
-    <select id="Q1-1" name="Q1-1" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- Q11 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q1">Cuando aprendo...</label>
+    <label class="col-md-1 control-label" for="Q1-1">Me involucro</label>
+    <div class="col-md-1">
+      <select id="Q1-1" name="Q1-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-2">Me gusta observar</label>
+    <div class="col-md-1">
+      <select id="Q1-2" name="Q1-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-3">Evalúo las cosas</label>
+    <div class="col-md-1">
+      <select id="Q1-3" name="Q1-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-4">Me gusta ser activo</label>
+    <div class="col-md-1">
+      <select id="Q1-4" name="Q1-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q1-2">Soy receptivo y abierto</label>
-  <div class="col-md-1">
-    <select id="Q1-2" name="Q1-2" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <br/><legend></legend>
+
+  <!-- Q12 -->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="Q1">Aprendo mejor cuándo:</label>
+    <label class="col-md-1 control-label" for="Q1-1">Analizo ideas</label>
+    <div class="col-md-1">
+      <select id="Q1-1" name="Q1-1" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-2">Soy receptivo y abierto</label>
+    <div class="col-md-1">
+      <select id="Q1-2" name="Q1-2" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-3">Soy cuidadoso</label>
+    <div class="col-md-1">
+      <select id="Q1-3" name="Q1-3" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <label class="col-md-1 control-label" for="Q1-4">Soy práctico</label>
+    <div class="col-md-1">
+      <select id="Q1-4" name="Q1-4" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
   </div>
-  <label class="col-md-1 control-label" for="Q1-3">Soy cuidadoso</label>
-  <div class="col-md-1">
-    <select id="Q1-3" name="Q1-3" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
-  <label class="col-md-1 control-label" for="Q1-4">Soy práctico</label>
-  <div class="col-md-1">
-    <select id="Q1-4" name="Q1-4" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </div>
+  <br/><legend></legend>
 </div>
-<br/><legend></legend>
 
 <!-- Button -->
 <div class="form-group">
