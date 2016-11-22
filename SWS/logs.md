@@ -1,6 +1,13 @@
 #LOGS 
 
 
+##beta 1.0.3
+
+###FrontEnd Update
+- Description
+- Images
+- Titles
+
 ##beta 1.0.2
 
 ###New folders
