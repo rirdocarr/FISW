@@ -1,5 +1,14 @@
 #LOGS 
 
+##beta 1.0.4
+
+###FrontEnd
+- Register's Validation
+
+###BackEnd
+- DB Connection
+- Query's Routes integration
+
 
 ##beta 1.0.3
 
